@@ -5,7 +5,7 @@ Create named routes and subroutes.
 ## Getting Started
 
 #### build parameters
-  **routeParam**: page1/:id.
+  **routeParam**: page1/:id<br>
   **arguments**: Navigator.pushNamed(context, "/page2", arguments: {"id": "15"});<br>
   **arguments with showArgumentsToRoute = true**: Navigator.pushNamed(context, "/page2",      **arguments**: {"id": "15"}); => url: page2?id=15<br>
   **complementRoute**: Navigator.pushNamed(context, "/menu/home"),<br>
