@@ -5,19 +5,19 @@ Create named routes and subroutes.
 ## Getting Started
 
 #### build parameters
-    __routeParam__: page1/:id
-    **arguments**: Navigator.pushNamed(context, "/page2", arguments: {"id": "15"});
-    **arguments with showArgumentsToRoute = true**: Navigator.pushNamed(context, "/page2",      **arguments**: {"id": "15"}); => url: page2?id=15
-    **complementRoute**: Navigator.pushNamed(context, "/menu/home"),
-        G2xNestedRoute(
-        '/menu',
-        build: (_, __, complementRoute) {
-          if(complementRoute == null) return Center(child: Text("not found"));
-          return MenuPage(route: complementRoute);
-        },
-      )
+  **routeParam**: page1/:id
+  **arguments**: Navigator.pushNamed(context, "/page2", arguments: {"id": "15"});
+  **arguments with showArgumentsToRoute = true**: Navigator.pushNamed(context, "/page2",      **arguments**: {"id": "15"}); => url: page2?id=15
+  **complementRoute**: Navigator.pushNamed(context, "/menu/home"),
+  	G2xNestedRoute(
+          '/menu',
+           build: (_, __, complementRoute) {
+             if(complementRoute == null) return Center(child: Text("not found"));
+             return MenuPage(route: complementRoute);
+           },
+         )
       complementRoute is /home
-    build: (routeParam, arguments, complementRoute) => Splash(),
+  build: (routeParam, arguments, complementRoute) => Splash(),
 
 #### create routes
     var routes = G2xRoute(
