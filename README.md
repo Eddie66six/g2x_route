@@ -9,6 +9,7 @@ Create named routes and subroutes.
   **arguments**: Navigator.pushNamed(context, "/page2", arguments: {"id": "15"});<br>
   **arguments with showArgumentsToRoute = true**: Navigator.pushNamed(context, "/page2",      **arguments**: {"id": "15"}); => url: page2?id=15<br>
   **complementRoute**: Navigator.pushNamed(context, "/menu/home"),<br>
+  
   	G2xNestedRoute(<br>
           '/menu',<br>
            build: (_, __, complementRoute) {<br>
@@ -16,7 +17,7 @@ Create named routes and subroutes.
              return MenuPage(route: complementRoute);<br>
            },<br>
          )<br>
-     complementRoute is /home<br>
+   complementRoute is /home<br>
   build: (routeParam, arguments, complementRoute) => Splash()<br>
 
 #### create routes
@@ -118,7 +119,7 @@ Create named routes and subroutes.
             currentIndex = index;
           });
         },
-				currentIndex: currentIndex,
+	currentIndex: currentIndex,
         items: [
           BottomNavigationBarItem(
               icon: Icon(Icons.person),
